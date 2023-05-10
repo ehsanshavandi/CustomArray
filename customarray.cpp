@@ -70,8 +70,8 @@ CustomArray<T>::~CustomArray()
 // No need to call this TemporaryFunction() function,
 // it's just to avoid link error.
 
-template class CustomArray<float>;
 template class CustomArray<int>;
+template class CustomArray<float>;
 template class CustomArray<long>;
 template class CustomArray<double>;
 template class CustomArray<long long>;
