@@ -34,37 +34,32 @@ void CustomArray<T>::append(T item)
     }
 }
 
-template<class T>
-void CustomArray<T>::removeItemByIndex(int index)
-{
-    if (index >= m_length)
-        throw -1;
+template <class T>
+void CustomArray<T>::removeItemByIndex(int index) {
+  if (index >= m_length) throw -1;
 
-    for (int i = index; i < m_length; i++) {
-        m_storage[i] = m_storage[i + 1];
-    }
+  for (int i = index; i < m_length; i++) {
+    m_storage[i] = m_storage[i + 1];
+  }
 }
 
-template<class T>
-T &CustomArray<T>::operator[](int index)
-{
-    if (index >= m_length) {
-        throw -1;
-    }
+template <class T>
+T &CustomArray<T>::operator[](int index) {
+  if (index >= m_length) {
+    throw -1;
+  }
 
-    return m_storage[index];
+  return m_storage[index];
 }
 
-template<class T>
-int CustomArray<T>::length() const
-{
-    return m_length;
+template <class T>
+int CustomArray<T>::length() const {
+  return m_length;
 }
 
-template<class T>
-CustomArray<T>::~CustomArray()
-{
-    delete[] m_storage;
+template <class T>
+CustomArray<T>::~CustomArray() {
+  delete[] m_storage;
 }
 
 // No need to call this TemporaryFunction() function,

@@ -4,8 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        customarray.cpp \
-        main.cpp
+    src/customarray.cpp \
+    src/main.cpp
+
+INCLUDEPATH += include/
 
 HEADERS += \
     customarray.h
